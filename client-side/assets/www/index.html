@@ -1,9 +1,10 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>My Page</title> 
+	<title>Mobilex - Sales Management</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="styles/styles.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 </head> 
@@ -15,14 +16,65 @@
 		<h1>Bienvenido a <i>Mobilex - Sales Management</i></h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<ul data-role="listview" data-inset="true" data-filter="true">
-			<li><a href="#">Acura</a></li>
-			<li><a href="#">Audi</a></li>
-			<li><a href="#">BMW</a></li>
-			<li><a href="#">Cadillac</a></li>
-			<li><a href="#">Ferrari</a></li>
-		</ul>	
+	<div data-role="content">
+		<div id="venta_info">
+			<h2>Venta nro: 0000&nbsp;</h2>
+			<p>-&nbsp;21 de Diciembre de 2012 - 16:42 pm</p>
+		</div>	
+		<div data-role="fieldcontain" class="ui-bar-a">
+			<input type="search" name="codigo_producto" id="codigo_producto" placeholder="C&oacute;digo" data-mini="true" />
+			<input type="text" name="nombre_producto" id="nombre_producto" placeholder="Nombre" data-mini="true" />
+			<label for="cantidad_producto">Cantidad</label>
+			<input type="range" name="cantidad_producto" value="0.00" min="0.00" max="100.00" step="0.01" data-mini="true" />
+			<div id="buscar_agregar">
+				<a href="#" data-role="button" data-mini="true" data-inline="true" id="buscar_producto" data-icon="arrow-r" data-iconpos="right">Buscar producto</a>
+				<input type="button" name="agregar_producto" id="agregar_producto" value="Agregar" data-mini="true" data-inline="true" data-icon="plus" data-iconpos="right"/>
+			</div>
+		</div>
+		<div class="ui-grid-d">
+			<div class="ui-block-a"><div class="ui-bar ui-bar-a">C&oacute;digo</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-a">Nombre</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-a">Precio</div></div>
+			<div class="ui-block-d"><div class="ui-bar ui-bar-a">I.V.A.</div></div>
+			<div class="ui-block-e"><div class="ui-bar ui-bar-a">Unidades</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar ui-bar-b">0001</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-b">Producto Uno</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
+			<div class="ui-block-d"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
+			<div class="ui-block-e"><div class="ui-bar ui-bar-b">0</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar ui-bar-b">0002</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-b">Producto Dos</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
+			<div class="ui-block-d"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
+			<div class="ui-block-e"><div class="ui-bar ui-bar-b">0</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar ui-bar-b">0003</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-b">Producto Tres</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
+			<div class="ui-block-d"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
+			<div class="ui-block-e"><div class="ui-bar ui-bar-b">0</div></div>
+			
+			<div class="ui-block-a"><div class="ui-bar ui-bar-b">0004</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-b">Producto Cuatro</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
+			<div class="ui-block-d"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
+			<div class="ui-block-e"><div class="ui-bar ui-bar-b">0</div></div>
+		</div>
+		<div class="ui-bar-a">
+			<div class="ui-grid-d">
+				<div class="ui-block-a" style="width: 50%">
+					&nbsp;
+				</div>
+				<div class="ui-block-b">
+					<input type="button" name="confirmar_venta" id="confirmar_venta" value="Confirmar" data-mini="true" data-icon="check" data-iconpos="right"/>
+				</div>
+				<div class="ui-block-c">
+					<input type="text" name="total_venta" id="total_venta" placeholder="$ 0000.00" data-mini="true" />
+				</div>
+		</div>
+		</div>
 	</div><!-- /content -->
 
 </div><!-- /page -->

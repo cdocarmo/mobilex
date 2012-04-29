@@ -1,0 +1,29 @@
+/*CSS*/
+div#venta_info h2, div#venta_info p {
+	display: inline;
+}
+
+.ui-input-search {
+	width: 10% !important;	
+}
+
+#nombre_producto {
+	width: 25% !important;
+}
+
+div.ui-slider {
+	width: 10% !important;
+}
+
+div#buscar_agregar {
+	width: 30%;
+	float: right;
+}
+
+a#buscar_producto, div#buscar_agregar div.ui-btn {
+	width: 45% !important;
+}
+
+/*div#buscar_agregar div {
+	display: inline !important;
+}*/
