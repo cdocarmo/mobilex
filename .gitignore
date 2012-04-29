@@ -3,5 +3,7 @@
 *.pyc
 *~
 *.directory
+*.project
+*.pydevproject
 sever-side/mobilex_server/settings.py
 local_settings.py

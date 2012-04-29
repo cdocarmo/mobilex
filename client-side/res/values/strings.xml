@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, MobActivity!</string>
-    <string name="app_name">Mobilex</string>
+    <string name="hello">Hello World, MobilexActivity!</string>
+    <string name="app_name">Client-side</string>
 
 </resources>
