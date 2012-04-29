@@ -1,4 +1,7 @@
 *.log
 *.pot
 *.pyc
+*~
+*.directory
+sever-side/mobilex_server/settings.py
 local_settings.py
