@@ -9,10 +9,34 @@
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 </head> 
 <body> 
+	
+<div data-role="page" id="access_page">
+	<div data-role="header" data-position="fixed">
+		<h1>Bienvenido a <i>Mobilex - Sales Management</i></h1>
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		<div class="ui-bar-a">
+			<div style="width: 50%; margin: auto; padding: 10px 5px; ">
+			<input type="text" name="username" id="username" placeholder="Tu nombre" />
+			<input type="password" name="userpass" id="userpass" placeholder="**********" />
+			<div data-role="controlgroup">
+				<a href="#sales_page" data-role="button" data-transition="slide" data-icon="arrow-r" data-iconpos="right">Acceder</a>
+				<a href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Salir</a>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<div class="ui-bar-a">
+			<p style="text-align: center">Sistema desarrollado sobre JQuery, JQueryMobile, PhoneGap y Django</p>
+		</div>
+	</div>
+</div>
 
-<div data-role="page">
-
-	<div data-role="header">
+<div data-role="page" id="sales_page">
+	<div data-role="header" data-position="fixed">
 		<h1>Bienvenido a <i>Mobilex - Sales Management</i></h1>
 	</div><!-- /header -->
 
@@ -76,6 +100,12 @@
 		</div>
 		</div>
 	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div class="ui-bar-a">
+			<p style="text-align: center">Sistema desarrollado sobre JQuery, JQueryMobile, PhoneGap y Django</p>
+		</div>
+	</div>
 
 </div><!-- /page -->
 
