@@ -11,8 +11,26 @@
 	<!--JQUERY-->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script src="jquery.jcarousel.min.js"></script>
 	<script type="text/javascript" charset="UTF-8">
-		
+		function slider_initCallback(carousel) {
+			$('#buscar_producto').bind('click', function() {
+				carousel.next();
+				return false;
+			});
+			$('#volver_ventas').bind('click', function() {
+				carousel.prev();
+				return false;
+			});
+		}
+		$(document).ready(function () {
+			$('#slider').jcarousel({
+				visible:1,
+				initCallback:slider_initCallback,
+				buttonNextHTML:null,
+				buttonPrevHTML:null
+			});
+		});
 	</script>
 </head> 
 <body> 
@@ -70,13 +88,15 @@
 			<label for="cantidad_producto">Cantidad</label>
 			<input type="range" name="cantidad_producto" value="0.00" min="0.00" max="100.00" step="0.01" data-mini="true" />
 			<div id="buscar_agregar">
-				<a href="#" data-role="button" data-mini="true" data-inline="true" id="buscar_producto" data-icon="arrow-r" data-iconpos="right">Buscar producto</a>
-				<input type="button" name="agregar_producto" id="agregar_producto" value="Agregar" data-mini="true" data-inline="true" data-icon="plus" data-iconpos="right"/>
+				<!--<input type="button" name="agregar_producto" id="agregar_producto" value="Agregar" data-mini="true" data-inline="true" data-icon="plus" data-iconpos="right"/>-->
+				<a href="" data-role="button" data-mini="true" data-inline="true" id="agregar_producto" data-icon="plus" data-iconpos="right">Agregar</a>
+				<a href="" data-role="button" data-mini="true" data-inline="true" id="volver_ventas" data-icon="arrow-l" data-iconpos="right">Ventas</a>
+				<a href="" data-role="button" data-mini="true" data-inline="true" id="buscar_producto" data-icon="arrow-r" data-iconpos="right">Productos</a>
 			</div>
 		</div>
-		<div id="slider">
+		<ul id="slider">
 			<!--block ventas-->
-			<div id="block_ventas">
+			<li id="block_ventas">
 				<div class="ui-grid-d">
 					<div class="ui-block-a"><div class="ui-bar ui-bar-a">C&oacute;digo</div></div>
 					<div class="ui-block-b"><div class="ui-bar ui-bar-a">Nombre</div></div>
@@ -121,9 +141,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</li>
 			<!--Block productos-->
-			<div id="block_productos">
+			<li id="block_productos">
 				<div class="ui-grid-d">
 					<div class="ui-block-a"><div class="ui-bar ui-bar-a">C&oacute;digo</div></div>
 					<div class="ui-block-b"><div class="ui-bar ui-bar-a">Nombre</div></div>
@@ -155,8 +175,8 @@
 					<div class="ui-block-d"><div class="ui-bar ui-bar-b">$ 0000.00</div></div>
 					<div class="ui-block-e"><div class="ui-bar ui-bar-b">0</div></div>
 				</div>
-			</div>
-		</div>
+			</li>
+		</ul>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-position="fixed">
