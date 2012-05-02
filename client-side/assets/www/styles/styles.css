@@ -3,7 +3,7 @@ div#venta_info h2, div#venta_info p {
 	display: inline;
 }
 
-.ui-input-search {
+div#bar_product .ui-input-search {
 	width: 10% !important;	
 }
 
@@ -18,6 +18,7 @@ div.ui-slider {
 div#buscar_agregar {
 	width: 30%;
 	float: right;
+	text-align: right;
 }
 
 a#buscar_producto, div#buscar_agregar div.ui-btn {
