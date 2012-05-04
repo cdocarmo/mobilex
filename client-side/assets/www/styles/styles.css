@@ -3,25 +3,30 @@ div#venta_info h2, div#venta_info p {
 	display: inline;
 }
 
-.ui-input-search {
-	width: 10% !important;	
+div#bar_product .ui-input-search {
+	width: 5% !important;	
 }
 
 #nombre_producto {
-	width: 25% !important;
+	width: 20% !important;
 }
 
 div.ui-slider {
-	width: 10% !important;
+	width: 15% !important;
 }
 
 div#buscar_agregar {
 	width: 30%;
 	float: right;
+	text-align: right;
 }
 
-a#buscar_producto, div#buscar_agregar div.ui-btn {
+/*a#buscar_producto, div#buscar_agregar div.ui-btn {
 	width: 45% !important;
+}*/
+
+.jcarousel-container.jcarousel-container-horizontal {
+	overflow: hidden;
 }
 
 /*div#buscar_agregar div {
